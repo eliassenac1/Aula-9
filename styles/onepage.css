@@ -1,0 +1,107 @@
+@import url(/styles/reset.css);
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(/img/pexels-neo-2653362.jpg); 
+    padding: 20px;
+    background-repeat: no-repeat;
+
+
+}
+div, section, span, ul, li, a, header{
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+#menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+
+}
+#menu li a{
+    text-decoration: none;
+    color: black;
+
+}
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+#home{
+    background-color: blanchedalmond;
+
+}
+#sobre {
+    background-color: blanchedalmond ;
+}
+#Portifolio{
+    background-color:blanchedalmond;
+
+}
+
+#contato{
+    background-color:blanchedalmond ;
+}
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.imagem{
+    
+    width: 50%;
+
+
+}
+.content{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+.content .title{
+    color: #1f1f25;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,blue 79.69%);
+    
+    -webkit-text-fill-color: transparent;
+}
+.content h1{
+    color: #1f1f25;
+    font-size: 75px;
+    font-weight: 900;
+    line-height: 90px;
+    text-transform: inherit;
+    width: 70%;
+}
+.content h1 span{
+    color: blue;
+}
+.content p{
+    width: 55%;
+    color: #757575;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
