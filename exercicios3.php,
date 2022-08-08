@@ -1,0 +1,57 @@
+<?php
+
+function calcularMedia($sn, $cn){
+    return ($sn/$cn);
+}
+
+if(isset($_GET['btnCalcular'])){
+
+    $notas = array($_GET['nota1'], $_GET['nota2']);
+    $contNotas = count($notas);
+
+    $soma = 0;
+
+    for($i=0; $i <= $contNotas; $i++){
+        $soma += @$notas[$i];
+    }
+
+    $media = calcularMedia($soma, $contNotas);
+    
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Média</title>
+</head>
+<body>
+
+<div class="container">
+<h2>Cálcular Média Bimestral</h2>
+    <form action="exercicio3.php" method="get">
+        <label for="nota1"> Primeira Nota <br> 
+            <input type="text" name="nota1" id="nota1" required>
+        </label> <br>
+        <label for="nota2"> Segunda Nota <br> 
+            <input type="text" name="nota2" id="nota2" required>
+        </label>
+        <br>
+        <button type="submit" name="btnCalcular">Calcular</button>
+    </form>
+
+    <?php
+     if(isset($media)){
+        echo '<p> <h3> Média Bimestral = '.$media.'<h3></p>';
+    } else{
+        echo "Não Foi Possível Cálcular a Média!";
+    }
+?>
+</div>
+    
+</body>
+</html>
